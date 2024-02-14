@@ -335,7 +335,7 @@ public class CustomerSupportFragment extends Fragment {
 
         public class ListViewHolder extends RecyclerView.ViewHolder {
 
-            public TextView tvRecpDt, tvRecpNo, tvPatnNm, tvCustSuptUpdtRqstStatNm;
+            public TextView tvRegDt,tvRecpDt, tvRecpNo, tvPatnNm, tvCustSuptUpdtRqstStatNm;
 
             public View v;
 
@@ -344,6 +344,7 @@ public class CustomerSupportFragment extends Fragment {
             public ListViewHolder(@NonNull View itemView) {
                 super(itemView);
                 v = itemView;
+                tvRegDt = (TextView) itemView.findViewById(R.id.tvRegDt);
                 tvRecpDt = (TextView) itemView.findViewById(R.id.tvRecpDt);
                 tvRecpNo = (TextView) itemView.findViewById(R.id.tvRecpNo);
                 tvPatnNm = (TextView) itemView.findViewById(R.id.tvPatnNm);
@@ -355,6 +356,7 @@ public class CustomerSupportFragment extends Fragment {
             }
 
             public void bindItem(NemoCustomerSupportListRO t) {
+                tvRegDt.setText(t.getRegDt());
                 tvRecpDt.setText(AndroidUtil.dispDate(t.getRecpDt()));
                 tvRecpNo.setText(AndroidUtil.nullToString(t.getRecpNo(),""));
                 tvPatnNm.setText(AndroidUtil.nullToString(t.getPatnNm(),""));

@@ -363,6 +363,17 @@ public class AndroidUtil {
 
         return rValue;
     }
+    public static String dispDt(String inStr)
+    {
+        String rValue = nullToString(inStr,"");
+
+        if( rValue.length() == 8)
+        {
+            rValue = rValue.substring(4,6) + "-" + rValue.substring(6);
+        }
+
+        return rValue;
+    }
 
     public static String dispTime(String inTime)
     {

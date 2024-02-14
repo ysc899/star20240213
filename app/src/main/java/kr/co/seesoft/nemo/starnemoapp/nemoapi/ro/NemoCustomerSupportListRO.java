@@ -31,6 +31,10 @@ public class NemoCustomerSupportListRO implements Serializable {
     @SerializedName("recpDt")
     public String recpDt;
 
+    /** 등록 */
+    @SerializedName("regDt")
+    public String regDt;
+
     /** 접수번호 */
     @SerializedName("recpNo")
     public String recpNo;
@@ -280,6 +284,13 @@ public class NemoCustomerSupportListRO implements Serializable {
         this.brncCd = brncCd;
     }
 
+    public String getRegDt() {
+        return regDt;
+    }
+
+    public void setRegDt(String regDt) {
+        this.regDt = regDt;
+    }
 
     @Override
     public String toString() {
